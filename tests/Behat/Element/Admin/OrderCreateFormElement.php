@@ -163,11 +163,15 @@ class OrderCreateFormElement extends Element implements OrderCreateFormElementIn
 
     public function getShippingMethodName(): string
     {
+        $this->clickOnTabAndWait('Shipments & Payments');
+
         return $this->getElement('selected_shipping_method')->getText();
     }
 
     public function getPaymentMethodName(): string
     {
+        $this->clickOnTabAndWait('Shipments & Payments');
+
         return $this->getElement('selected_payment_method')->getText();
     }
 
